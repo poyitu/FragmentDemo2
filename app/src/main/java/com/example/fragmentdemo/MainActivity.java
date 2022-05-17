@@ -26,7 +26,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn:
-                replaceFragment(new BlankFragment1());
+                Bundle bundle = new Bundle();
+                bundle.putString("message", "我是秦哈哈");
+                BlankFragment1 blankFragment1 = new BlankFragment1();
+                blankFragment1.setArguments(bundle);
+                replaceFragment(blankFragment1);
                 break;
             case R.id.btn2:
                 replaceFragment(new ItemFragment());
